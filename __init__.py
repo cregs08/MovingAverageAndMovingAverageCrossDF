@@ -40,7 +40,7 @@ def create_market_data_MA_MAcross_DF(market_data, low_ma, high_ma):
     return market_data_MAs_and_crosses
 
 #demo code
-
+#sample data as BTCUSDT 4h stored as pickle file 
 
 if __name__ == '__main__':
     data_file = ''
