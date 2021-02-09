@@ -1,4 +1,4 @@
-from TransformData import FindPatternInColumn
+import FindPatternInColumn
 import talib
 
 import pandas as pd
