@@ -29,10 +29,10 @@ def create_market_data_MA_MAcross_DF(market_data, low_ma, high_ma):
         market_data_MAs[low_ma] > market_data_MAs[high_ma]
 
     #our cross is defined here e.g at period1 5ma = 10, 10ma = 11 => false; period2 5ma = 12, 10ma = 11.5 => True
-    MA_crosses = FindPatternInColumn.find_boolean_pattern_in_column\
+    ma_crosses = FindPatternInColumn.find_boolean_pattern_in_column\
         ([False, True], low_MA_over_high_MA_boolean_series)
 
-    market_data_MAs_and_crosses = pd.concat([market_data_MAs, low_MA_over_high_MA_boolean_series, MA_crosses],
+    market_data_MAs_and_crosses = pd.concat([market_data_MAs, low_MA_over_high_MA_boolean_series, ma_crosses],
                                             ignore_index=True, axis=1)
 
     market_data_MAs_and_crosses.columns = ['close', low_ma, high_ma, 'low_over_high', 'cross']
