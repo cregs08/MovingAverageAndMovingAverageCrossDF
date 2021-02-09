@@ -40,11 +40,11 @@ def create_market_data_MA_MAcross_DF(market_data, low_ma, high_ma):
     return market_data_MAs_and_crosses
 
 #demo code
-#sample data as BTCUSDT 4h stored as pickle file 
+#sample data as BTCUSDT 4h stored as .dat
 
 if __name__ == '__main__':
-    data_file = ''
-    symbol = ''
+    data_file = 'BTCUSDT.dat'
+    symbol = 'BTCUSDT'
     BTCUSDT_market_close_data = pd.read_pickle(data_file)[symbol]['close']
     low_ma = 5
     high_ma = 10
